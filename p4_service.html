@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewoport" content="width=device-width, initial-scale=1">
+        <title>Service</title>
+        <!--css-style-->
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@400;500&family=Teko&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap" rel="stylesheet"> 
+        <!--bootstrap-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/popper.min.js"></script> 
+        <!--icon-->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@500&family=Yusei+Magic&display=swap" rel="stylesheet"> 
+        <!--graph-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+
+
+       <style>
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DotGothic16&family=Jockey+One&family=Kiwi+Maru:wght@400;500&family=Mochiy+Pop+P+One&family=Noto+Serif+TC:wght@400;500&family=Teko&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap');
+  
+            #atsd{
+                font-family: 'Jockey One', sans-serif;
+                color: #fff;
+                font-size:45px;
+                z-index: 999;
+            }
+            .clip_left{
+                background-color: #fff;
+                display: inline;
+            }
+
+            body{
+                background-image: url(what-the-hex-dark/what-the-hex-dark.png);
+            }
+
+            a{
+                text-decoration: none;
+                color: #00E6F6;
+                transition: color 1s;
+                font-family: 'Jockey One', sans-serif;
+            }
+
+            a:hover{
+                color: #E953DA;
+            }
+            
+
+        .nav-link{
+            text-decoration: none;
+            color: #00E6F6;
+            font-size: 25px;
+            font-family: 'Bebas Neue', cursive;
+            transition: color 1s;
+        }
+        .nav-link:hover{
+            color:#E953DA;
+        }
+        .fi-rr-plus-small{
+            color: #E953DA !important;
+            font-size: 16px !important;
+        }
+
+        #navbar1{
+            background-color: #000;
+            z-index: 1;
+            -webkit-clip-path: polygon(100% 0%, 100% 0, 85% 100%, 0 100%, 0 0, 0 0);
+            clip-path: polygon(100% 0%, 100% 0, 90% 100%, 0 100%, 0 0, 0 0);
+            color: #00E6F6;
+            padding: 10px;
+        }
+
+        .navbar-collapse {
+            box-shadow: #00E6F6 1px 1px 1px;
+        }
+
+        .navbar-expand-md{
+            background-color: rgba(0, 0, 0, .25);
+            backdrop-filter: blur(80%);
+        }
+
+        .navbar-center {
+            float: none;
+            vertical-align: top;
+            }
+
+        .navbar-collapse-center {
+            text-align: center;
+            }
+
+        .navbar-brand{
+            text-decoration: none;
+            color: #fff;
+            transition: color 1s;
+        } 
+        .navbar-brand:hover{
+            color: #E953DA;
+        }
+        .pill{
+            color: #000;
+        }
+
+
+        .fi-rr-menu-burger{
+            color: #fff !important;
+        }
+
+        /*文章*/
+
+    .world{
+        background-color: #00E6F6;
+        width: 100%;
+        height: 100px;
+        font-size: 60px;
+        font-family: 'Jockey One', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+
+
+    }
+
+    .world_content{
+        background-color: rgba(0, 0, 0, .55);
+        backdrop-filter: blur(80%);
+    }
+
+    #my-chart{
+        background-color: #000;
+        color: #fff;
+        --primary-axis-color: rgba(0, 0, 0, 1);
+        --primary-axis-style: solid;
+        --primary-axis-width: 1px;
+    }
+
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;  
+        box-shadow:none;        
+    }
+
+    /*graph*/
+
+
+    #my-chart.column {
+        --labels-size: 4rem;
+    }
+
+    th{
+        font-size: 20px;
+        color: #fff;
+        font-family: 'Jockey One', sans-serif;
+        letter-spacing: 1px;
+    }
+
+    table,td{
+        background-color: rgba(0, 0, 0, .75);
+        backdrop-filter: blur(80%);
+
+        border: #00E6F6 1px solid;
+    }
+
+        /*card*/
+        .card{
+        align-items: center;
+        backdrop-filter: blur(80%);
+        background-color: rgba(0, 0, 0, 1);
+        height: 15em;
+        font-family: 'Jockey One', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        transition: 2s all;
+        filter: drop-shadow(0px 0px 1px #00E6F6);
+        -webkit-clip-path: polygon(10% 0, 100% 0, 100% 20%, 100% 91%, 91% 100%, 20% 100%, 0 100%, 0 8%);
+        clip-path: polygon(10% 0, 100% 0, 100% 20%, 100% 91%, 91% 100%, 20% 100%, 0 100%, 0 8%);
+    }
+
+
+    .card-title{
+        color: #00E6F6;
+        font-size: 24px;
+    }
+
+    .card-text{
+        color: #fff;
+        word-break: keep-all;
+    }
+
+
+    .card:hover{
+        backdrop-filter: blur(80%);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+
+    /*投資方法*/
+
+    h2{
+        font-family: 'Jockey One', sans-serif;
+        letter-spacing: 2px;
+        color: #00E6F6;
+        text-align: center;
+    }
+
+    p{
+        font-family: 'Jockey One', sans-serif;
+        letter-spacing: 2px;
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+    }
+
+    /*info*/
+
+    .material-icons{
+        font-size: 150px !important;
+        text-align: center;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: #00E6F6;
+    }
+
+    h5 .card-title,h5{
+        text-align: center;
+    }
+
+    #btn5_content{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+  }
+
+  #btn5_content,#btn5_content::after {
+  color: #00E6F6;
+  padding: 5px;
+  border-spacing: 10px;
+  font-size: 25px;
+  letter-spacing: 3px;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(45deg, transparent 8%, #000 2%);
+  border: #00E6F6 1px dashed;
+  box-shadow: 3px 0px 0px #00E6F6;
+  outline: transparent;
+}
+
+#btn5_content::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  --slice-6: inset(60% -6px 70% 0);
+  content: 'Learn More';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 10%, #00E6F6 3%, #FF008F 5%, #000 5%);
+  text-shadow: -3px -3px 0px #FF008F, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+#btn5_content:hover:active::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-40px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 15px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-8px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 3px);
+  }
+  35% {
+    clip-path: var(--slice-6);
+    transform: translate(-45px, 3px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(6px, 0px);
+  }
+  55% {
+    clip-path: var(--slice-6);
+    transform: translate(55px, 4px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 13px);
+  }
+  65% {
+    clip-path: var(--slice-6);
+    transform: translate(45px, 9px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+    
+
+    .btn{
+        font-size: 30px;
+        color: #fff;
+        background-color: #000;
+        transition: background-color 1s;
+        transition:  color 1s;
+    }
+
+    .btn:hover{
+        color: #FF008F;
+    }
+
+    .btn:focus{
+        color: #000;
+        background-color: #fff;
+    }
+
+    ul li{
+      font-family: 'Jockey One', sans-serif;
+      color: #00E6F6;
+      font-size: 25px;
+    }
+
+    
+
+        </style>
+    </head>
+<body>
+    <div class="text">
+     <!--link-->
+     <!-- <p>死亡人壽</p> -->
+    <nav class="navbar navbar-expand-md fixed-top" id="full">
+
+        <div class="container-fluid">
+            <!--link-->
+       
+                <a href="#" class="nav-link">
+                   <img src="indexx.png" alt="" width="50px" height="50px">
+                </a>
+
+                <a href="index.html" class="nav-link" id="atsd">
+                   As the Sun Dying
+                </a>
+      
+            <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <i class="fi fi-rr-menu-burger"></i>
+              </button>
+              <div class="collapse navbar-collapse navbar-collapse-center" id="navbar1">
+            <ul class="nav navbar-nav me-auto navbar-center  navbar-nav-scroll">
+ 
+                <!-- <li class="nav-item">
+                    <a href="#top" class="nav-link">Top</a>
+                </li> -->
+                <li class="nav-item">
+                    <a href="p0_home.html" class="nav-link">Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p3_news.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p1_Info.html" class="nav-link" >Introduction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p8_how.html" class="nav-link">How to play</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p4_service.html" class="nav-link" style="color: #E953DA;">Service</a>
+                </li>
+                <li class="nav-item">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                        <a href="p7_about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p2_design.html" class="nav-link">Concept</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p9_login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+     </div>
+
+
+
+<br><br><br><br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="world">
+                <h1>Mortality Rate in a decade</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col" style="height: 12em;"></div>
+</div>
+
+
+<!--article-->
+<!--nar-->
+<div class="container">
+<table class="charts-css column hide-data show-labels data-spacing-8 show-primary-axis">
+
+    <thead>
+      <tr>
+        <th scope="col" style="color: #00E6F6;"> Month </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+  
+    <tbody>
+    <tr>
+        <th scope="row" style="font-size: 20px;"> 2011 </th>
+        <td style="--size: 6.61; --color: #fff"> <span class="data"> 30 </span> </td>
+        </tr>
+      <tr>
+        <th scope="row" style="font-size: 20px;"> 2012 </th>
+        <td style="--size: 6.67; --color: #fff"> <span class="data"> 30 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: #fff;"> 2013 </th>
+        <td style="--size: 6.67; --color: #fff"> <span class="data"> 50 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: #fff;"> 2014 </th>
+        <td style="--size: 6.98; --color: #fff"> <span class="data"> 80 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: #fff;"> 2015 </th>
+        <td style="--size: 6.98; --color: #fff"> <span class="data"> 100 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: #fff;"> 2016 </th>
+        <td style="--size: 7.35; --color: #fff"> <span class="data"> 65 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: #fff;"> 2017 </th>
+        <td style="--size: 7.3; --color: #fff"> <span class="data"> 45 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: #fff;"> 2018 </th>
+        <td style="--size: 7.32; --color: #fff"> <span class="data"> 15 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: #fff;"> 2019 </th>
+        <td style="--size: 7.44; --color: #fff"> <span class="data"> 32 </span> </td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: #fff;"> 2020 </th>
+        <td style="--size: 7.34291771765451; --color: #fff"> <span class="data"> 60 </span> </td>
+      </tr>
+    </tbody>
+  
+  </table><br>
+  <ul class="charts-css legend legend-inline">
+    <li> 6.61 →</li>
+
+    <li> 6.67 →</li>
+
+    <li> 6.67 →</li>
+
+    <li> 6.98 →</li>
+
+    <li> 6.98 →</li>
+
+    <li> 7.35 →</li>
+
+    <li> 7.30 →</li>
+
+    <li> 7.32 →</li>
+ 
+    <li> 7.44 →</li>
+
+    <li> 7.34 </li>
+
+  </ul>
+
+</div>
+
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="world">
+                <h1>Suitable Users</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12"></div>
+            <div class="world_content">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img src="icon/flag.png" class="card-img-top" alt="..."style="width: 10em;">
+                        <div class="card-body">
+                          <h5 class="card-title">Fear of Death</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="icon/gun.png" class="card-img-top" alt="..."style="width: 10em;">
+                        <div class="card-body">
+                          <h5 class="card-title">Love Survival Game</h5>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="icon/c.png" class="card-img-top" alt="..."style="width: 10em;">
+                        <div class="card-body">
+                          <h5 class="card-title">Enjoy Challenging</h5>
+                        </div>
+                      </div>
+                    </div>
+
+                      </div>
+                  </div>
+            </div>
+    </div>
+</div>
+
+
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="world">
+                <h1>Insurance</h1>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<br><br>
+
+<!--ser-->
+<div class="container">
+    <p>
+        <a class="btn" data-bs-toggle="collapse" href="#step" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Insurance Procedures
+        </a> &nbsp;
+        <a class="btn" data-bs-toggle="collapse" href="#Details" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Details
+      </a>&nbsp;
+        <a class="btn" data-bs-toggle="collapse" href="#settlement-of-insurance-claim" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Settlement of Insurance Claim
+      </a>
+
+      </p>
+      <div class="collapse" id="step">
+            <div class="row">
+                <div class="col-md-12"></div>
+                    <div class="world_content">
+                        <div class="step1">
+                            <h2>Step 1</h2>
+                            <p>Sign up and Login.</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Step 2</h2>
+                            <p>Make an appointment with us.</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Step 3</h2>
+                            <p>Go to the counter with two forms of identification.</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Step 4</h2>
+                            <p>Paid-up insurance.</p>
+                        </div>
+                        <div class="step1">
+                            <button id="btn5_content"><a href="https://www.nhi.gov.tw/information/paycount.aspx">
+                                Insured</a></button>
+                        </div>
+                        <br>
+                    </div>
+            </div>
+        </div>
+
+        <div class="collapse" id="Details">
+            <div class="row">
+                <div class="col-md-12"></div>
+                    <div class="world_content">
+                        <div class="step1">
+                            <h2>Product name</h2>
+                            <p>Project 38-As the Sun Dying</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Period of Insurance	</h2>
+                            <p>5 years</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Assumed Premium</h2>
+                            <p>Annually</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Insurance Age</h2>
+                            <p>No Age limit</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Sum Insured</h2>
+                            <p> NT$ 1000,000</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Beneficiary</h2>
+                            <p>Direct Blood Relative, Spouse or Heir at Law</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Insurance Premium</h2><br>
+                            <button id="btn5_content"><a href="https://www.nhi.gov.tw/information/paycount.aspx">Calculated</a></button>
+                        </div>
+                        <br>
+                        <div class="step1">
+                            <h2>Exclusion Clause</h2>
+                            <p>1.The insured willfully commits suicide</p>
+                            <p>2.The insured was executed for crime</p>
+                            <p>3.The insured died as the result of resisting arrest or escaping from jail</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="collapse" id="settlement-of-insurance-claim">
+            <div class="row">
+                <div class="col-md-12"></div>
+                    <div class="world_content">
+                        <div class="step1">
+                            <h2>Documents for Claim</h2>
+                                <p>▪ Application for ATSD Insurance Benefits</p>
+                                <p>▪ Household Registration(Insured)</p>
+                                <p>▪ Death Certificates</p>
+                                <p>▪ Reissuance of the Autopsy Certificate</p>
+                                <p>▪ Insurance Certificate</p>   
+                                <p>▪ ID Documents of the Beneficiary</p>
+                        </div>
+                        <div class="step1">
+                            <h2>Application</h2>
+                            <button  id="btn5_content"><a href="#">Click</a></button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+</div>
+
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="world">
+                <h1>Infromation</h1>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<br><br>
+
+<!--info-->
+<div class="container">
+    <div class="row">
+        <div class="world_content">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card">
+                    <span class="material-icons">
+                        phone_in_talk
+                        </span>
+                    <div class="card-body">
+                            <h5 class="card-title">Contact Us</h5>
+                      <p class="card-text">0800-987-654</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <span class="material-icons">
+                        alternate_email
+                        </span>                
+                    <div class="card-body">
+                      <h5 class="card-title">Email</h5>
+                      <p class="card-text">astd38@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <span class="material-icons">
+                          schedule
+                          </span>
+                      <div class="card-body">
+                        <h5 class="card-title">Service Hours</h5>
+                        <p class="card-text">8:30 am - 5:00 pm</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                        <span class="material-icons">
+                            contact_phone
+                            </span>
+                      <div class="card-body">
+                        <h5 class="card-title">Insurance Coordinator </h5>
+                        <input type="text" class="form-control" placeholder="Number" aria-label="Username">
+                      </div>
+                    </div>
+                  </div>
+                <div class="col">
+                  <div class="card">
+                    <span class="material-icons">
+                        business
+                        </span>
+                    <div class="card-body">
+                      <h5 class="card-title">Headquarters</h5>
+                      <p class="card-text">15 Edwards LocksLucybergBN13 3DN</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <span class="material-icons">
+                        business
+                          </span>
+                      <div class="card-body">
+                        <h5 class="card-title">Taiwan Branch</h5>
+                        <p class="card-text" style="font-family: 'Zen Antique Soft', serif;">106 臺北市大安區龍泉街10號</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+              </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

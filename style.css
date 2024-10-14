@@ -1,0 +1,24 @@
+::-moz-selection { 
+    color: #000;
+    background: #00E6F6;
+  }
+  
+  ::selection {
+    color: #000;
+    background: #00E6F6;
+  }
+
+body{
+  background-image: url(what-the-hex-dark/what-the-hex-dark.png);
+}
+
+body::-webkit-scrollbar {
+  width: 20px;
+  background-color: black;
+  border: #fff 1px solid;
+
+  }
+
+  body::-webkit-scrollbar-thumb {
+  background: linear-gradient(#00E6F6,#FF7598);
+  }

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewoport" content="width=device-width, initial-scale=1">
+        <title>SignUp</title>
+        <!--css-style-->
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@400;500&family=Teko&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap" rel="stylesheet"> 
+        <!--bootstrap-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/popper.min.js"></script> 
+        <!--icon-->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@500&family=Yusei+Magic&display=swap" rel="stylesheet"> 
+
+
+       <style>
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DotGothic16&family=Jockey+One&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@400;500&family=Teko&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap');
+  
+            #atsd{
+                font-family: 'Jockey One', sans-serif;
+                color: #fff;
+                font-size:45px;
+                z-index: 999;
+            }
+            .clip_left{
+                background-color: #fff;
+                display: inline;
+            }
+
+            body{
+                background-image: url(what-the-hex-dark/what-the-hex-dark.png);
+            }
+
+            a{
+                text-decoration: none;
+                transition: color 1s;
+            }
+
+            a:hover{
+                color:#E953DA;
+            }
+
+            #login_btn a{
+                color: #00E6F6;
+                transition: color 1s;
+            }
+
+            #login_btn a:hover{
+                color: #E953DA;
+            }
+
+            #forget_pw{
+                color: #fff;
+            }
+
+            #forget_pw:hover{
+                color: #E953DA;
+            }
+        .nav-link{
+            text-decoration: none;
+            color: #00E6F6;
+            font-size: 25px;
+            font-family: 'Bebas Neue', cursive;
+            transition: color 1s;
+        }
+        .nav-link:hover{
+            color:#E953DA;
+        }
+        .fi-rr-plus-small{
+            color: #E953DA !important;
+            font-size: 16px !important;
+        }
+
+        #navbar1{
+            background-color: #000;
+            z-index: 1;
+            -webkit-clip-path: polygon(100% 0%, 100% 0, 85% 100%, 0 100%, 0 0, 0 0);
+            clip-path: polygon(100% 0%, 100% 0, 90% 100%, 0 100%, 0 0, 0 0);
+            color: #00E6F6;
+            padding: 10px;
+        }
+
+        .navbar-collapse {
+            box-shadow: #00E6F6 1px 1px 1px;
+        }
+
+        .navbar-expand-md{
+            background-color: rgba(0, 0, 0, .25);
+            backdrop-filter: blur(80%);
+        }
+
+        .navbar-center {
+            float: none;
+            vertical-align: top;
+            }
+
+        .navbar-collapse-center {
+            text-align: center;
+            }
+
+        .navbar-brand{
+            text-decoration: none;
+            color: #fff;
+            transition: color 1s;
+        } 
+        .navbar-brand:hover{
+            color: #E953DA;
+        }
+        .pill{
+            color: #000;
+        }
+
+
+        .fi-rr-menu-burger{
+            color: #fff !important;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus {
+            outline: none;  
+            box-shadow:none;        
+        }
+
+
+        /*文章*/
+
+    .login{
+        background-color: #00E6F6;
+        width: 100%;
+        height: 100px;
+        font-size: 60px;
+        font-family: 'Jockey One', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+
+
+    }
+
+    #login_content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00E6F6;
+        color: #00E6F6;
+        font-family: 'Jockey One', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        background-color: rgba(0, 0, 0, .55);
+        box-shadow: #00E6F6 5px 5px 0px ;
+        backdrop-filter: blur(80%);
+    }
+
+
+    /*login btn*/
+    #login_btn{
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50px;
+  }
+
+    #login_btn,#login_btn::after {
+    color: #00E6F6;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(45deg, transparent 8%, #000 2%);
+    border: #00E6F6 1px dashed;
+    box-shadow: 3px 0px 0px #00E6F6,-3px 0px 0px #00E6F6;
+    outline: transparent;
+    }
+
+    #login_btn::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    --slice-6: inset(60% -6px 70% 0);
+    content: 'Login';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 10%, #00E6F6 3%, #FF008F 5%, #000 5%);
+    text-shadow: -3px -3px 0px #FF008F, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+    }
+
+    #login_btn:active::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+    }
+
+
+
+    @keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-40px, -10px);
+    }
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 15px);
+    }
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-8px, 10px);
+    }
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 3px);
+    }
+    35% {
+        clip-path: var(--slice-6);
+        transform: translate(-45px, 3px);
+    }
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(6px, 0px);
+    }
+    55% {
+        clip-path: var(--slice-6);
+        transform: translate(55px, 4px);
+    }
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 13px);
+    }
+    65% {
+        clip-path: var(--slice-6);
+        transform: translate(45px, 9px);
+    }
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+    }
+
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;  
+        box-shadow:none;        
+    }
+
+    .form-control:focus,
+    .form-control:active:focus,
+    .form-control.active:focus,
+    .form-control.focus,
+    .form-control:active.focus,
+    .form-control.active.focus {
+        outline: none;  
+        box-shadow:none;
+        border: #00E6F6 solid 2px;        
+    }
+
+        </style>
+    </head>
+<body>
+    <div class="text">
+     <!--link-->
+     <!-- <p>死亡人壽</p> -->
+    <nav class="navbar navbar-expand-md fixed-top" id="full">
+
+        <div class="container-fluid">
+            <!--link-->
+       
+                <a href="#" class="nav-link">
+                   <img src="indexx.png" alt="" width="50px" height="50px">
+                </a>
+
+                <a href="index.html" class="nav-link" id="atsd">
+                   As the Sun Dying
+                </a>
+      
+            <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <i class="fi fi-rr-menu-burger"></i>
+              </button>
+              <div class="collapse navbar-collapse navbar-collapse-center" id="navbar1">
+            <ul class="nav navbar-nav me-auto navbar-center  navbar-nav-scroll">
+ 
+                <!-- <li class="nav-item">
+                    <a href="#top" class="nav-link">Top</a>
+                </li> -->
+                <li class="nav-item">
+                    <a href="p0_home.html" class="nav-link">Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p3_news.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p1_Info.html" class="nav-link" >Introduction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p8_how.html" class="nav-link">How to play</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p4_service.html" class="nav-link">Service</a>
+                </li>
+                <li class="nav-item">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                        <a href="p7_about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p2_design.html" class="nav-link">Concept</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p9_login.html" class="nav-link" style="color: #E953DA;">Login</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+     </div>
+<br><br><br><br><br>
+<!--login-->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h1 class="login">Sign Up</h1>
+    </div>
+</div>
+
+<!--login_content-->
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10" id="login_content">
+        <form class="form_login">
+            <span class="material-icons" style="font-size:60px !important">
+                done
+                </span>
+            <div class="mb-3">
+                <h2>Success!</h2>
+                <div id="emailHelp" class="form-text">Please check your E-mail.</div>
+              </div>
+
+  
+            <br>
+            <div class="row"><button type="submit" id="login_btn" class="col-md-11"><a href="p9_login.html" class="a_button">Finish</a> </button></div>
+            <br><br>
+            
+          </form>
+    </div>
+</div>
+
+</body>
+</html>

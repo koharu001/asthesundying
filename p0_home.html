@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewoport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+        <!--css-style-->
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@400;500&family=Teko&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap" rel="stylesheet"> 
+        <!--bootstrap-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/popper.min.js"></script> 
+        <!--icon-->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DotGothic16&family=Jockey+One&family=Kiwi+Maru:wght@400;500&family=Mochiy+Pop+P+One&family=Noto+Serif+TC:wght@400;500&family=Teko&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap" rel="stylesheet"> 
+
+
+       <style>
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DotGothic16&family=Jockey+One&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@400;500&family=Teko&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap');
+  
+            #atsd{
+                font-family: 'Jockey One', sans-serif;
+                color: #fff;
+                font-size:45px;
+                z-index: 999;
+            }
+            .clip_left{
+                background-color: #fff;
+                display: inline;
+            }
+
+            body{
+                background-image: url(what-the-hex-dark/what-the-hex-dark.png);
+            }
+
+            a{
+                text-decoration: none;
+                color: #00E6F6;
+                font-family: 'Jockey One', sans-serif;
+                transition: color 2s;
+            }
+
+            a:hover{
+                color: #E953DA;
+            }
+
+        .nav-link{
+            text-decoration: none;
+            color: #00E6F6;
+            font-size: 25px;
+            font-family: 'Bebas Neue', cursive;
+            transition: color 1s;
+        }
+        .nav-link:hover{
+            color:#E953DA;
+        }
+        .fi-rr-plus-small{
+            color: #E953DA !important;
+            font-size: 16px !important;
+        }
+
+        #navbar1{
+            background-color: #000;
+            z-index: 1;
+            -webkit-clip-path: polygon(100% 0%, 100% 0, 85% 100%, 0 100%, 0 0, 0 0);
+            clip-path: polygon(100% 0%, 100% 0, 90% 100%, 0 100%, 0 0, 0 0);
+            color: #00E6F6;
+            padding: 10px;
+        }
+
+        .navbar-collapse {
+            box-shadow: #00E6F6 1px 1px 1px;
+        }
+
+        .navbar-expand-md{
+            background-color: rgba(0, 0, 0, .25);
+            backdrop-filter: blur(80%);
+        }
+
+        .navbar-center {
+            float: none;
+            vertical-align: top;
+            }
+
+        .navbar-collapse-center {
+            text-align: center;
+            }
+
+        .navbar-brand{
+            text-decoration: none;
+            color: #fff;
+            transition: color 1s;
+        } 
+        .navbar-brand:hover{
+            color: #E953DA;
+        }
+        .pill{
+            color: #000;
+        }
+
+
+        .fi-rr-menu-burger{
+            color: #fff !important;
+        }
+
+       /*card*/
+       .topic_content .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        backdrop-filter: blur(80%);
+        background-color: rgba(0, 0, 0, 1);
+        font-family: 'Jockey One', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        transition: 2s all;
+        filter: drop-shadow(0px 0px 1px #00E6F6);
+        -webkit-clip-path: polygon(10% 0, 100% 0, 100% 20%, 100% 91%, 91% 100%, 20% 100%, 0 100%, 0 8%);
+        clip-path: polygon(10% 0, 100% 0, 100% 20%, 100% 91%, 91% 100%, 20% 100%, 0 100%, 0 8%);
+    }
+
+
+    .topic_content .card-title{
+        color: #00E6F6;
+    }
+
+    .topic_content .card-text{
+        color: #fff;
+    }
+
+
+    .topic_content .card:hover{
+        backdrop-filter: blur(80%);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    
+
+    .topic_content .card::after{
+        content: "News";
+        background-color: #00E6F6;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    /*rank card*/
+    .RANK_content .card{
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        /* height: 150px; */
+        backdrop-filter: blur(80%);
+        background-color: rgba(0, 0, 0, 1);
+        font-family: 'Jockey One', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        transition: 2s all;
+        box-shadow: #00E6F6 0px 1px 0px;
+ 
+    }
+
+    
+    .RANK_content{
+        overflow-y: scroll;
+        scrollbar-color: #FF7598 #000;
+        scrollbar-width: thin; 
+    }
+
+
+
+    .RANK_content::-webkit-scrollbar {
+    width: 7px;
+
+    background-color: black;
+    }
+
+    .RANK_content::-webkit-scrollbar-thumb {
+    background: linear-gradient(#00E6F6,#FF7598);
+    }
+
+    .RANK_content .card-title{
+        color: #00E6F6;
+        font-size: 40px;
+    }
+
+    .RANK_content .card-text{
+        color: #fff;
+    }
+
+
+    .RANK_content .card:hover{
+        backdrop-filter: blur(80%);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    
+
+    .RANK_content .card:nth-child(1)::after{
+        content: "#1";
+        background-color: #00E6F6;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    .RANK_content .card:nth-child(2)::after{
+        content: "#2";
+        background-color: #FF7598;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    .RANK_content .card:nth-child(3)::after{
+        content: "#3";
+        background-color: #00E6F6;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    .RANK_content .card:nth-child(4)::after{
+        content: "#4";
+        background-color: #00E6F6;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    .RANK_content .card:nth-child(5)::after{
+        content: "#5";
+        background-color: #00E6F6;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    .RANK_content .card:nth-child(6)::after{
+        content: "#6";
+        background-color: #FF7598;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    .RANK_content .card:nth-child(7)::after{
+        content: "#7";
+        background-color: #FF7598;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    .RANK_content .card:nth-child(8)::after{
+        content: "#8";
+        background-color: #00E6F6;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    .RANK_content .card:nth-child(9)::after{
+        content: "#9";
+        background-color: #00E6F6;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    .RANK_content .card:nth-child(10)::after{
+        content: "#10";
+        background-color: #00E6F6;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+        /*文章*/
+
+    .world,.progress{
+        background-color: #00E6F6;
+        width: 100%;
+        height: 100px;
+        font-size: 60px;
+        font-family: 'Jockey One', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+
+
+    }
+
+    .world_content,.progress_content{
+        background-color: rgba(0, 0, 0, .25);
+        backdrop-filter: blur(80%);
+        box-shadow: #00E6F6 1px 1px 0px ;
+        width: 100%;
+        height: 500px;
+    }
+
+    .RANK_content{
+        background-color: rgba(0, 0, 0, .25);
+        backdrop-filter: blur(80%);
+        box-shadow: #00E6F6 1px 1px 0px ;
+        width: 100%;
+        height: 500px; 
+    }
+
+    .topic_content{
+        background-color: rgba(0, 0, 0, .25);
+        backdrop-filter: blur(80%);
+        box-shadow: #00E6F6 1px 1px 0px ;
+        width: 100%;
+    }
+
+    .intro_content{
+        background-color: rgba(0, 0, 0, .25);
+        backdrop-filter: blur(80%);
+        box-shadow: #00E6F6 1px 1px 0px ;
+        font-size: 25px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Zen Antique Soft', serif;
+        width: 100%;
+    }
+
+    /*progress*/
+
+ 
+    #people,#prog,#pollute{
+        position: relative;
+        background-color: #fff;
+        height: 50px;
+        width: 95%;
+        -webkit-clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+    }
+
+    #people::after{
+        content: "5000";
+        color: #000;
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        height: 50px;
+        width: 95%;
+        text-align: center;
+        font-family: 'Jockey One', sans-serif;
+    }
+
+    #people::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background:linear-gradient(to right ,#00E6F6 , #E953DA);
+        box-shadow: 0px 0px 5px #E953DA;
+        transition: all .2s ease;
+        animation: overfull 3s forwards;
+        animation-delay: 1s;
+    }
+
+    @keyframes overfull{
+        to{
+        width: 40%;
+        }
+    }
+
+    #prog::after{
+        content: "10F";
+        color: #000;
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        height: 50px;
+        width: 95%;
+        text-align: center;
+        font-family: 'Jockey One', sans-serif;
+    }
+
+    #prog::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background:linear-gradient(to right ,#00E6F6 , #E953DA);
+        box-shadow: 0px 0px 5px #E953DA;
+        transition: all .2s ease;
+        animation: overfull1 3s forwards;
+        animation-delay: 1s;
+    }
+
+    @keyframes overfull1{
+        to{
+        width: 10%;
+        }
+    }
+
+    #pollute::after{
+        content: "30%";
+        color: #000;
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        height: 50px;
+        width: 95%;
+        text-align: center;
+        font-family: 'Jockey One', sans-serif;
+    }
+
+    #pollute::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background:linear-gradient(to right ,#00E6F6 , #E953DA);
+        box-shadow: 0px 0px 5px #E953DA;
+        transition: all .2s ease;
+        animation: overfull2 3s forwards;
+        animation-delay: 1s;
+    }
+
+    @keyframes overfull2{
+        to{
+        width: 30%;
+        }
+    }
+
+    /*RANK*/
+
+
+    h2{
+        color: #00E6F6;
+        font-family: 'Jockey One', sans-serif;
+    }
+
+    /*btn*/
+
+
+  #btn5,#btn5::after {
+  color: #00E6F6;
+  padding: 10px;
+  border-spacing: 5px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(45deg, transparent 8%, #000 2%);
+  border: #00E6F6 1px dashed;
+  box-shadow: 3px 0px 0px #00E6F6;
+  outline: transparent;
+}
+
+#btn5::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  --slice-6: inset(60% -6px 70% 0);
+  content: 'Learn More';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 10%, #00E6F6 3%, #FF008F 5%, #000 5%);
+  text-shadow: -3px -3px 0px #FF008F, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+#btn5:hover:active::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-40px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 15px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-8px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 3px);
+  }
+  35% {
+    clip-path: var(--slice-6);
+    transform: translate(-45px, 3px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(6px, 0px);
+  }
+  55% {
+    clip-path: var(--slice-6);
+    transform: translate(55px, 4px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 13px);
+  }
+  65% {
+    clip-path: var(--slice-6);
+    transform: translate(45px, 9px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;  
+        box-shadow:none;        
+    }
+
+
+
+        </style>
+    </head>
+<body>
+    <div class="text">
+     <!--link-->
+     <!-- <p>死亡人壽</p> -->
+    <nav class="navbar navbar-expand-md fixed-top" id="full">
+
+        <div class="container-fluid">
+            <!--link-->
+       
+                <a href="#" class="nav-link">
+                   <img src="indexx.png" alt="" width="50px" height="50px">
+                </a>
+
+                <a href="index.html" class="nav-link" id="atsd">
+                   As the Sun Dying
+                </a>
+      
+            <button class=" btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <i class="fi fi-rr-menu-burger"></i>
+              </button>
+              <div class="collapse navbar-collapse navbar-collapse-center" id="navbar1">
+            <ul class="nav navbar-nav me-auto navbar-center  navbar-nav-scroll">
+ 
+                <!-- <li class="nav-item">
+                    <a href="#top" class="nav-link">Top</a>
+                </li> -->
+                <li class="nav-item">
+                    <a href="p0_home.html" class="nav-link" style="color: #E953DA;">Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p3_news.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p1_Info.html" class="nav-link">Introduction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p8_how.html" class="nav-link">How to play</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p4_service.html" class="nav-link">Service</a>
+                </li>
+                <li class="nav-item">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                        <a href="p7_about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p2_design.html" class="nav-link">Concept</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p9_login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+     </div>
+
+<!--CAROU-->
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="SPE/969451_0.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+
+<br><br>
+<!--article-->
+<div class="container">
+    <div class="row" >
+        <div class="col-md-12">
+            <div class="world">
+                <h1>Topic</h1>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="row">
+        <div class="col-md-12"></div>
+            <div class="topic_content">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col">
+                    <div class="card">
+                      <h4 class="card-text-top" >...</h4>
+                      <div class="card-body">
+                        <h5 class="card-title">New Year Event (Dec. 20. 2021 ~ Dec. 31. 2021) </h5>
+                        <p class="card-text">As time flies,the last week of this year is coming.
+                          How are you going to celebrate the New Year Eve?...</p>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="col">
+                      <div class="card">
+                        <h4 class="card-text-top" >...</h4>
+                        <div class="card-body">
+                          <h5 class="card-title">Updated (Dec. 1. 2021) </h5>
+                          <p class="card-text">2.0.1 content update is focus on new floor,moster...</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    </div>
+
+    <br><br>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="world">
+                <h1>Introduction</h1>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12"></div>
+            <div class="intro_content">
+                <h1>死亡----並非終點。</h1>
+                <br>
+                <p>對未知的死亡感到恐懼?</p>
+                <p>覺得生命中危機四伏，沒有保障?</p>
+                <p>Project ATSD-38，又稱作「隕落之際」，</p>
+                <p>將賜予各位有個，嶄新的第二人生。</p>
+
+     
+
+                <button id="btn5" ><a href="p1_Info.html">Read More</a></button>
+     
+                <button id="btn5"><a href="p8_how.html">Take out</a></button>
+
+                 <br><br>
+            </div>
+    </div>
+
+    <br><br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="progress">
+                <h1>Progress</h1>
+                
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="world" id="rankk">
+                <h1>Ranking</h1>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="progress_content">
+                    <h2>Players</h2>
+                    <div id="people"></div>
+                    <br>
+                    <h2>Progress</h2>
+                    <div id="prog"></div>
+                    <br>
+                    <h2>Pollution rate</h2>
+                    <div id="pollute"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="RANK_content">
+                <!--top 1-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192347.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">WOOTEN</h5>
+                          <p class="card-text">Skill : Cure</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--top 2-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192718.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color: #FF7598;">TREASURE</h5>
+                          <p class="card-text">Skill : Paralysis</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--top 3-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192347.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">HENDRIX</h5>
+                          <p class="card-text">Skill : Sneak</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--top 4-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192347.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">DELACRUZ</h5>
+                          <p class="card-text">Skill : Incibility</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--top 5-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192347.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">CEDRIC</h5>
+                          <p class="card-text">Skill : Teleport</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--top 6-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192718.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color: #FF7598;">RAMONA</h5>
+                          <p class="card-text">Skill : Trap</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--top 7-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192718.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color: #FF7598;">PAULA</h5>
+                          <p class="card-text">Skill : Immunity</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--top 8-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192347.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">ZAVIER</h5>
+                          <p class="card-text">Skill : Decoy</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--top 9-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192347.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">BRIDGER</h5>
+                          <p class="card-text">Skill : Detect</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--top 10-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <img src="download20211200192347.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">ALFRED</h5>
+                          <p class="card-text">Skill : Ghost</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<br>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewoport" content="width=device-width, initial-scale=1">
+        <title>News</title>
+        <!--css-style-->
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@400;500&family=Teko&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap" rel="stylesheet"> 
+        <!--bootstrap-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/popper.min.js"></script> 
+        <!--icon-->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@500&family=Yusei+Magic&display=swap" rel="stylesheet"> 
+
+
+       <style>
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DotGothic16&family=Jockey+One&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@400;500&family=Teko&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap');
+  
+            #atsd{
+                font-family: 'Jockey One', sans-serif;
+                color: #fff;
+                font-size:45px;
+                z-index: 999;
+            }
+            .clip_left{
+                background-color: #fff;
+                display: inline;
+            }
+
+            body{
+                background-image: url(what-the-hex-dark/what-the-hex-dark.png);
+            }
+
+        .nav-link{
+            text-decoration: none;
+            color: #00E6F6;
+            font-size: 25px;
+            font-family: 'Bebas Neue', cursive;
+            transition: color 1s;
+        }
+        .nav-link:hover{
+            color:#E953DA;
+        }
+        .fi-rr-plus-small{
+            color: #E953DA !important;
+            font-size: 16px !important;
+        }
+
+        #navbar1{
+            background-color: #000;
+            z-index: 1;
+            -webkit-clip-path: polygon(100% 0%, 100% 0, 85% 100%, 0 100%, 0 0, 0 0);
+            clip-path: polygon(100% 0%, 100% 0, 90% 100%, 0 100%, 0 0, 0 0);
+            color: #00E6F6;
+            padding: 10px;
+        }
+
+        .navbar-collapse {
+            box-shadow: #00E6F6 1px 1px 1px;
+        }
+
+        .navbar-expand-md{
+            background-color: rgba(0, 0, 0, .25);
+            backdrop-filter: blur(80%);
+        }
+
+        .navbar-center {
+            float: none;
+            vertical-align: top;
+            }
+
+        .navbar-collapse-center {
+            text-align: center;
+            }
+
+        .navbar-brand{
+            text-decoration: none;
+            color: #fff;
+            transition: color 1s;
+        } 
+        .navbar-brand:hover{
+            color: #E953DA;
+        }
+        .pill{
+            color: #000;
+        }
+
+
+        .fi-rr-menu-burger{
+            color: #fff !important;
+        }
+
+        /*文章*/
+
+    .world{
+        background-color: #00E6F6;
+        width: 100%;
+        height: 100px;
+        font-size: 60px;
+        font-family: 'Jockey One', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+
+
+    }
+
+    /*card*/
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        backdrop-filter: blur(80%);
+        background-color: rgba(0, 0, 0, 1);
+        font-family: 'Jockey One', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        transition: 2s all;
+        filter: drop-shadow(0px 0px 1px #00E6F6);
+        -webkit-clip-path: polygon(10% 0, 100% 0, 100% 20%, 100% 91%, 91% 100%, 20% 100%, 0 100%, 0 8%);
+        clip-path: polygon(10% 0, 100% 0, 100% 20%, 100% 91%, 91% 100%, 20% 100%, 0 100%, 0 8%);
+    }
+
+
+    .card-title{
+        color: #00E6F6;
+        font-size: 24px;
+    }
+
+    .card-text{
+        color: #fff;
+        word-break: keep-all;
+    }
+
+
+    .card:hover{
+        backdrop-filter: blur(80%);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    
+
+    .card::after{
+        content: "News";
+        background-color: #00E6F6;
+        color: #fff;
+        text-shadow: #000 1px 1px 2px;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        right: 1%;
+        top: 1em;
+        position: absolute;
+    }
+
+    /*page*/
+    .page-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #00E6F6;
+        font-family: 'Jockey One', sans-serif;
+        font-size: 20px;
+        
+  -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 100%, 0% 20%);
+  clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 100%, 0% 20%);
+
+        letter-spacing: 2px;
+        background-color: #fff;
+        backdrop-filter: blur(80%);
+        transition: 1s all;
+    }
+    .page-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #00E6F6;
+        font-family: 'Jockey One', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        background-color: rgba(0, 0, 0, 1);
+        backdrop-filter: blur(80%);
+        transition: 1s all;
+    }
+
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;  
+        box-shadow:none;        
+    }
+
+
+        </style>
+    </head>
+<body>
+    <div class="text">
+     <!--link-->
+     <!-- <p>死亡人壽</p> -->
+    <nav class="navbar navbar-expand-md fixed-top" id="full">
+
+        <div class="container-fluid">
+            <!--link-->
+       
+                <a href="#" class="nav-link">
+                   <img src="indexx.png" alt="" width="50px" height="50px">
+                </a>
+
+                <a href="index.html" class="nav-link" id="atsd">
+                   As the Sun Dying
+                </a>
+      
+            <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1"  aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fi fi-rr-menu-burger"></i>
+              </button>
+              <div class="collapse navbar-collapse navbar-collapse-center" id="navbar1">
+            <ul class="nav navbar-nav me-auto navbar-center navbar-nav-scroll">
+ 
+                <!-- <li class="nav-item">
+                    <a href="#top" class="nav-link">Top</a>
+                </li> -->
+                <li class="nav-item">
+                    <a href="p0_home.html" class="nav-link">Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p3_news.html" class="nav-link" style="color: #E953DA;">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p1_Info.html" class="nav-link" >Introduction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p8_how.html" class="nav-link">How to play</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p4_service.html" class="nav-link">Service</a>
+                </li>
+                <li class="nav-item">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                        <a href="p7_about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p2_design.html" class="nav-link">Concept</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fi fi-rr-plus-small"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="p9_login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+     </div>
+<br><br><br><br><br>
+<!--article-->
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <div class="world">
+            <h1>News</h1>
+        </div>
+    </div>
+</div>
+</div>
+
+<br><br>
+
+<!--EVENT-->
+<div class="container">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="#"> <img src="newsbanner/97778.jpeg" class="d-block w-100" alt="..."></a>
+    </div>
+    <div class="carousel-item">
+      <a href="p0_home.html #rankk"> <img src="newsbanner/97779.jpeg" class="d-block w-100" alt="..."></a>
+    </div>
+    <div class="carousel-item">
+      <a href="p8_how.html"> <img src="newsbanner/97781.jpeg" class="d-block w-100" alt="..."></a>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<br><br>
+
+<!--card-->
+<div class="container">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <h4 class="card-text-top" >...</h4>
+        <div class="card-body">
+          <h5 class="card-title">New Year Event (Dec. 20. 2021 ~ Dec. 31. 2021) </h5>
+          <p class="card-text">As time flies,the last week of this year is coming.
+            How are you going to celebrate the New Year Eve?...</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h4 class="card-text-top" >...</h4>
+        <div class="card-body">
+          <h5 class="card-title">Final Ranking (Dec. 26. 2021)</h5>
+          <p class="card-text">The result of Christmas Event are showed in the announcement.
+            And the reward has already sent to every players' box...</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h4 class="card-text-top" >...</h4>
+        <div class="card-body">
+          <h5 class="card-title">X'mas Event (Dec. 24. 2021)</h5>
+          <p class="card-text">Christmas Eve is coming;however,our Santa Claus has disappeared!!
+            Could we find him before Christmas Eve? ...
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h4 class="card-text-top" >...</h4>
+        <div class="card-body">
+          <h5 class="card-title">Special Raid on Dec (Dec. 22. 2021)</h5>
+          <p class="card-text">Which flavor of Tangyuan do you like?sesame or peanut?
+            We would eat tangyuan with a family reunion on Winter Solstice...
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card">
+          <h4 class="card-text-top" >...</h4>
+          <div class="card-body">
+            <h5 class="card-title">Public Memorial Ceremony (Dec. 15. 2021)</h5>
+            <p class="card-text">Death is not lost their lives, but out of the time.
+              --"Cries in the Drizzle" We will have a Public Memorial Ceremony at SOUL Square Park...
+            </p>
+          </div>
+        </div>
+      </div>
+    <div class="col">
+        <div class="card">
+          <h4 class="card-text-top" >...</h4>
+          <div class="card-body">
+            <h5 class="card-title">Updated (Dec. 1. 2021) </h5>
+            <p class="card-text">2.0.1 content update is focus on new floor,moster...</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<br>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+<br><br>
+<div class="row">
+    <div class="col-md-12"></div>
+        <div class="world_content"></div>
+</div>
+
+<!-- <article class="row">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10"></div>
+    <div class="col-md-1"></div>
+</article> -->
+
+</body>
+</html>

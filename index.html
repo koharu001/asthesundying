@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewoport" content="width=device-width, initial-scale=1">
+        <title>Start</title>
+        
+        <!--css-style-->
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- Animate.css v4.1.1 -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+      <link rel="shortcut icon" href="favicon.ico"/>
+        <!--bootstrap-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/popper.min.js"></script> 
+        <!--icon-->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+TC:wght@400;500&family=Yusei+Magic&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+
+       <style>
+            *{
+                font-family: 'DotGothic16', sans-serif;
+                font-weight: 400;
+                font-style: normal;
+
+            }
+
+
+
+          .fi-sr-chevron-double-up{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            color: white;
+            text-shadow:0px 0px 5px #00E6F6;
+          }
+
+          .container {
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .texta {
+          font-size: 2em;
+          border-right: 3px solid;
+          width: 22ch;
+          animation: typing 2s steps(15) forwards , blink .5s step-end infinite alternate;
+          transition: ease-out 4s;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+
+        @keyframes typing {
+          0% {
+            width: 0;
+
+          }
+          100%{
+            width: 100;
+            text-shadow:0px 0px 2px #fff;
+            opacity: 100%;
+
+          }
+
+
+        }
+            
+
+        @keyframes blink {
+          50% {
+            border-color: transparent;
+          }
+        }
+
+      .texta{
+        color: #fff;
+      }
+
+
+      .texta:hover{
+        transform: translateY(-10px) translateX(-10px);
+      }
+
+      button{
+        display: block;
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        top:60%;
+        left: 50%;
+        margin-top: 1em;
+        width: 150px;
+        height: 40px;
+        color: #4C44CF;
+        background-color: #fff;
+        border: #000 solid 1px;
+        transition: ease-in-out;
+        transition: background-color 1s,color 1s;
+        transition:  1s;
+        animation: animate 4s linear;
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+      button:hover{
+        background-color: #000;
+        color: #00E6F6;
+        border: #fff solid 1px;
+      }
+
+      button:hover::after{
+        content: " >>";
+      }
+
+
+
+      @keyframes animate{
+        0%{
+          opacity: 0;
+            left: -50%;
+        }
+        50%,100%{
+          opacity: 100%;
+            left: 50%;
+        }
+}
+  #content1 p{
+    color: #fff;
+    font-size: 35px;
+    text-shadow:2px 1px 1px #000;
+  }
+  .row p{
+    color: #00E6F6;
+    font-size: 30px;
+
+  }
+  #content{
+    position: absolute;
+    left: 5%;
+  }
+
+  .yy{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  /* .row{
+    position: relative;
+    left: 1em;
+  } */
+
+  /*進度條*/
+  #p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9,#p10{
+    position: relative;
+    border: #fff solid 1px;
+    background-color: #000;
+    height: 50px;
+ 
+  }
+  #p1 p,#p2 p,#p3 p,#p4 p,#p5 p,#p6 p,#p7 p,#p8 p,#p9 p,#p10 p{
+    color: #fff;
+    text-align: center;
+  }
+
+  #p1::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull{
+    to{
+      width: 28.6%;
+    }
+  }
+
+  #p2::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull1 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull1{
+    to{
+      width: 11.3%;
+    }
+  }
+
+  #p3::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull2 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull2{
+    to{
+      width: 8.7%;
+    }
+  }
+
+  #p4::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull3 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull3{
+    to{
+      width: 6.9%;
+    }
+  }
+
+  #p5::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull4 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull4{
+    to{
+      width: 5.7%;
+    }
+  }
+
+  #p6::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull5 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull5{
+    to{
+      width: 3.8%;
+    }
+  }
+
+
+  #p7::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull5 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull6{
+    to{
+      width: 3.6%;
+    }
+  }
+
+  #p8::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull7 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull7{
+    to{
+      width: 3.6%;
+    }
+  }
+
+  #p9::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull8 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull8{
+    to{
+      width: 2.9%;
+    }
+  }
+
+
+  #p10::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    box-shadow: 0px 0px 5px#fff;
+    transition: all .2s ease;
+    animation: overfull9 3s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes overfull9{
+    to{
+      width: 2.4%;
+    }
+  }
+
+  /* 第二行文字*/
+  #text2{
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    white-space: nowrap;
+  }
+
+  #text2_content{
+    color: #fff;
+    line-height: 55px;
+    font-size: 23px;
+    word-break: keep-all;
+  }
+
+  /*第三行文字*/
+  #text3{
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    white-space: nowrap;
+  }
+
+  #text3_content{
+    color: #fff;
+    line-height: 55px;
+    font-size: 23px;
+    word-break:keep-all;
+    
+  } 
+
+    /*第四行文字*/
+    #text4{
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    white-space: nowrap;
+  }
+
+    #text4_content{
+      color: #fff;
+      line-height: 55px;
+      font-size: 23px;
+      word-break: keep-all;
+      
+  } 
+
+  /*learn more btn*/
+
+  .btn5{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+  }
+
+  #btn5_content,#btn5_content::after {
+  color: #00E6F6;
+  padding: 20px;
+  border-spacing: 10px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(45deg, transparent 8%, #000 2%);
+  border: #00E6F6 1px dashed;
+  box-shadow: 3px 0px 0px #00E6F6;
+  outline: transparent;
+}
+
+#btn5_content::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  --slice-6: inset(60% -6px 70% 0);
+  content: 'Learn More';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 10%, #00E6F6 3%, #FF008F 5%, #000 5%);
+  text-shadow: -3px -3px 0px #FF008F, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+#btn5_content:hover:active::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-40px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 15px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-8px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 3px);
+  }
+  35% {
+    clip-path: var(--slice-6);
+    transform: translate(-45px, 3px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(6px, 0px);
+  }
+  55% {
+    clip-path: var(--slice-6);
+    transform: translate(55px, 4px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 13px);
+  }
+  65% {
+    clip-path: var(--slice-6);
+    transform: translate(45px, 9px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+        </style>
+    </head>
+<body>
+     <!--link-->
+     <!-- <p>死亡人壽</p> -->
+     <div id="topis"></div>
+
+<div class="container">
+  <div class="texta">
+   人往生之後，會去何處?
+  </div>
+
+</div>
+<div id="btn">
+  <a href="#content1">
+  <button>Read more</button></a>
+</div>
+
+<br><br>
+<div id="content1">
+  <div class="row">
+<p class="col-md-12 text-center">2020年，全台十大死因</p>
+</div>
+</div>
+<br><br>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>惡性腫瘤</p></div>
+  <div class="col-md-8" id="p1"><p>28.6%</p></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>心臟疾病</p></div>
+  <div class="col-md-8" id="p2"><p>11.3%</p></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>肺炎</p></div>
+  <div class="col-md-8" id="p3"><p>8.7%</p></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>腦血管疾病</p></div>
+  <div class="col-md-8" id="p4"><p>6.9%</p></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>糖尿病</p></div>
+  <div class="col-md-8" id="p5"><p>5.7%</p></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>事故傷害</p></div>
+  <div class="col-md-8" id="p6"><p>3.8%</p></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>高血壓性疾病</p></div>
+  <div class="col-md-8" id="p7"><p>3.6%</p></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>慢性下呼吸道疾病</p></div>
+  <div class="col-md-8" id="p8"><p>3.6%</p></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>腎炎、腎病症候群及腎病變</p></div>
+  <div class="col-md-8" id="p9"><p>2.9%</p></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><p>慢性肝病及肝硬化</p></div>
+  <div class="col-md-8" id="p10"><p>2.4%</p></div>
+</div>
+<br><br><br>
+
+<div class="row">
+  <div class="col-md-12 " id="text2">死亡，並非罕見現象</div>
+  <div class="col-md-1"></div>
+<div class="col-md-11" id="text2_content">
+  然而，在諸多的死亡人口中，有多少人的生命，是在意外、疾病、被害等各種
+  非自然形式下，被強迫拉下了帷幕？
+</div>
+</div>
+
+<br><br><br>
+
+<div class="row">
+  <div class="col-md-12" id="text3">假如，能重新選擇</div>
+  <div class="col-md-1"></div>
+<div class="col-md-11" id="text3_content">
+  在非自然情況下往生的人，也許都有幾個未了的心願。
+  假如，可以自己選擇想要的死亡方式，或者，有一個重生的機會，是否能將遺憾降到最小？
+</div>
+</div>
+
+<br><br>
+<div class="btn5">
+
+  <a href="p0_home.html" id="btn5_content">learn more</a>
+</div>
+
+
+<script>
+  window.confirm("1101729蘇文馨 //最佳體驗:Googlechrome 1366*768");
+</script>
+
+</body>
+</html>
